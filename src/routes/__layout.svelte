@@ -1,11 +1,13 @@
 <script lang="ts">
 	import '../app.css';
-	import Nav from '$components/Nav.svelte';
-	import Footer from '$components/Footer.svelte';
+	import Nav from '$lib/components/Nav.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<div class="p-8 max-w-6xl mx-auto">
+<main class="h-screen flex items-center px-6 lg:px-32 bg-purple-900 text-white">
 	<Nav />
-	<slot />
+	<section class="w-full grid place-items-center h-screen">
+		<slot />
+	</section>
 	<Footer />
-</div>
+</main>
