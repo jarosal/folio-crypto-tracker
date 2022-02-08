@@ -1,8 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<script>
+	import themeStore, { setTheme } from 'svelte-themes';
+</script>
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 	<path
 		stroke-linecap="round"
 		stroke-linejoin="round"
 		stroke-width="2"
 		d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
 	/>
-</svg>
+</svg> -->
+
+<select bind:value={$themeStore.theme}>
+	<option value="dark">Dark</option>
+	<option value="light">Light</option>
+</select>
+
+<button on:click={() => setTheme('dark')}> Dark mode </button>
