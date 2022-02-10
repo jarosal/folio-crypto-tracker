@@ -1,7 +1,7 @@
-<script lant="ts">
+<script lang="ts">
 	import themeStore from 'svelte-themes';
 
-	function switchTheme() {
+	function switchTheme(): void {
 		$themeStore.theme = $themeStore.theme === 'dark' ? 'light' : 'dark';
 	}
 </script>

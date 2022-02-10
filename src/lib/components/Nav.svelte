@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import UserPanel from '$lib/components/nav/UserPanel.svelte';
 	import ThemeSwitch from '$lib/components/nav/ThemeSwitch.svelte';
 	import CurrencySwitch from '$lib/components/nav/CurrencySwitch.svelte';
