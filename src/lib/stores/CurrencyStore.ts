@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store';
+import { currencies } from '$lib/utility/currency/currencies';
 import type { Currency } from 'src/types';
 
 export interface CurrencyStore {
@@ -9,7 +10,7 @@ export const setCurrency = (currency: Currency): void => currencyStore.update((s
 
 export const currencyStore = writable<CurrencyStore>(
     {
-        selectedCurrency: undefined
+        selectedCurrency: currencies[0]
     }
 );
 

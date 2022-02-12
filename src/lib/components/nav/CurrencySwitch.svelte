@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { currencyStore } from '$lib/stores/CurrencyStore';
-	import { Currency } from 'src/types';
+	import { currencies } from '$lib/utility/currency/currencies';
+	import currencyText from '$lib/utility/currency/currencyText';
 </script>
 
 <div class="relative inline-flex">
@@ -14,11 +15,11 @@
 	<select
 		bind:value={$currencyStore.selectedCurrency}
 		on:click={() => console.log($currencyStore.selectedCurrency)}
-		class="border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+		class="border border-gray-300 rounded-lg text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
 	>
-		{#each Object.values(Currency) as c}
-			<option value={c}>
-				{c}
+		{#each currencies as currency}
+			<option value={currency}>
+				{currencyText(currency)}
 			</option>
 		{/each}
 	</select>
