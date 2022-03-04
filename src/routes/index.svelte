@@ -2,8 +2,10 @@
 	import FolioBigLogo from '$lib/components/common/FolioBigLogo.svelte';
 </script>
 
-<div class="h-12">
+<section>
 	<FolioBigLogo />
-</div>
+</section>
 
-<div class="w-1/2 h-96 bg-red-300 mx-5 dark:bg-zinc-50" />
+<section class="w-full">
+	<div class="w-full h-96 bg-red-300 dark:bg-zinc-50" />
+</section>

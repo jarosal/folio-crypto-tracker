@@ -2,7 +2,11 @@ const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			minHeight: {
+				'layout': 'calc(100vh - 240px)',
+			},
+		}
 	},
 
 	plugins: [],

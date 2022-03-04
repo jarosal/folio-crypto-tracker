@@ -1,4 +1,4 @@
-<footer class="absolute inset-x-0 bottom-0 p-4 lg:p-10">
+<footer class="text-white p-4 lg:p-10 ">
 	<p class="font-bold font-sans text-center text-sm">
 		powered by
 		<a href="https://kit.svelte.dev" rel="noopener" target="_blank" class="hover:text-pink-400">SvelteKit</a>

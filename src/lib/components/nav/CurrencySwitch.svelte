@@ -14,7 +14,6 @@
 	>
 	<select
 		bind:value={$currencyStore.selectedCurrency}
-		on:click={() => console.log($currencyStore.selectedCurrency)}
 		class="border border-gray-300 rounded-lg text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
 	>
 		{#each currencies as currency}

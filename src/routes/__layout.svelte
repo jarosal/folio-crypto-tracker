@@ -7,10 +7,12 @@
 
 <SvelteTheme attribute="class" />
 
-<main class="h-screen flex items-center px-6 lg:px-32 bg-purple-900 text-white">
-	<Nav />
-	<section class="w-full grid grid-cols-1 row-start-1 place-items-center h-screen">
+<Nav />
+
+<main class="min-h-screen mt-[120px] text-white xl:min-h-layout">
+	<div class="container mx-auto w-full grid justify-center px-6 lg:px-32">
 		<slot />
-	</section>
-	<Footer />
+	</div>
 </main>
+
+<Footer />
