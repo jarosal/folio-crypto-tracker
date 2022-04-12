@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { currencyStore } from '$lib/stores/CurrencyStore';
 	import { currencies } from '$lib/utility/currency/currencies';
-	import currencyText from '$lib/utility/currency/currencyText';
+	import { getCurrencyString } from '$lib/utility/currency/currency-utility';
 </script>
 
 <div class="relative inline-flex">
@@ -18,7 +18,7 @@
 	>
 		{#each currencies as currency}
 			<option value={currency}>
-				{currencyText(currency)}
+				{getCurrencyString(currency)}
 			</option>
 		{/each}
 	</select>
