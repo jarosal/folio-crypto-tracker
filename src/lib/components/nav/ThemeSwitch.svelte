@@ -8,12 +8,12 @@
 
 <button
 	aria-label="Toggle Dark Mode"
-	class="ml-1 flex h-9 w-9 items-center justify-center rounded-lg bg-yellow-400 ring-yellow-400
-			transition-all hover:ring-2 dark:bg-yellow-800"
+	class="ml-2 flex h-10 w-10 items-center justify-center rounded-lg bg-mustard-200 ring-mustard-200
+			transition-all hover:ring-2 dark:bg-mustard-800"
 	on:click={switchTheme}
 >
 	{#if $themeStore.theme === 'light'}
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-5 w-5 text-gray-800 dark:text-yellow-100">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-6 w-6 text-black">
 			<path
 				stroke-linecap="round"
 				stroke-linejoin="round"
@@ -23,7 +23,7 @@
 			/>
 		</svg>
 	{:else}
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5 text-gray-800 dark:text-gray-200">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6 dark:text-white">
 			<path
 				stroke-linecap="round"
 				stroke-linejoin="round"
