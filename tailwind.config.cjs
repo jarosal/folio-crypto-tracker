@@ -8,7 +8,8 @@ const config = {
 			},
 			colors: {
 				'eggshell': {
-					50: '#F9F1DC'
+					50: '#F9F1DC',
+					200: '#F0DCA8'
 				},
 				'mustard': {
 					200: '#FFCB69',
