@@ -32,6 +32,10 @@ const config = {
 					800: '#221C22'
 				}
 			},
+			fontFamily: {
+				lato: ["Lato", "sans-serif"],
+				karma: ["Karma", "multi-script"]
+			}
 		}
 	},
 
