@@ -1,7 +1,7 @@
-import { request } from "$lib/third_party/utility/request";
+import { request } from "$lib/third-party/utility/request";
 import type { Currency } from "src/types";
-import type { Coins } from "../types/coins";
-import { URL } from "../utility/constants";
+import type { Coins } from "../types/Coins";
+import { URL } from "../utils/constants";
 
 const ENDPOINT = "/coins/markets";
 

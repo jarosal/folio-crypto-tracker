@@ -1,4 +1,4 @@
-<footer class="font-karma font-normal text-eggshell-50 text-center text-base p-10">
+<footer class="font-karma font-normal text-eggshell-50 text-center text-[15px] p-10">
 	<p>
 		powered by
 		<a href="https://kit.svelte.dev" rel="noopener" target="_blank" class="hover:text-eggshell-200 font-semibold">SvelteKit</a>

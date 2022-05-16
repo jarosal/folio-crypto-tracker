@@ -13,7 +13,7 @@
 	>
 	<select
 		bind:value={$currencyStore.selectedCurrency}
-		class="font-normal text-sm text-black rounded-lg h-10 pl-5 pr-8 bg-eggshell-50  ring-eggshell-50 hover:ring-2 focus:outline-none appearance-none"
+		class="font-lato font-normal text-[15px] text-black rounded-lg h-10 pl-5 pr-8 bg-eggshell-50  ring-eggshell-200 hover:ring-2 focus:outline-none appearance-none"
 	>
 		{#each currencies as currency}
 			<option value={currency}>
