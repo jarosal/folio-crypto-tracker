@@ -1,5 +1,5 @@
 <script lang="ts">
-	import currencyStore from '$lib/stores/CurrencyStore';
+	import { fiatCurrencyStore } from '$lib/stores/FiatCurrencyStore';
 
 	export let btcMarketCap: number;
 	export let btcPrice: number;
@@ -17,7 +17,7 @@
 			value = (marketCap / 1000000000000).toFixed(1) + ' Trillion';
 		}
 
-		return `${$currencyStore.selectedCurrency.sign}${value}`;
+		return `${$fiatCurrencyStore.selectedCurrency.sign}${value}`;
 	}
 
 	let displayValue = formatMarketCap(marketCap);

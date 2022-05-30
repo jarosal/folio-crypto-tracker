@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { currencyStore } from '$lib/stores/CurrencyStore';
-	import { currencies } from '$lib/utility/currency/currencies';
-	import { getCurrencyString } from '$lib/utility/currency/currency-utility';
+	import { fiatCurrencyStore, availableFiatCurrencies, getCurrencyString } from '$lib/stores/FiatCurrencyStore';
 </script>
 
 <div class="relative inline-flex">
@@ -12,10 +10,10 @@
 		/></svg
 	>
 	<select
-		bind:value={$currencyStore.selectedCurrency}
+		bind:value={$fiatCurrencyStore.selectedCurrency}
 		class="font-lato font-normal text-[15px] text-black rounded-lg h-10 pl-5 pr-8 bg-eggshell-50  ring-eggshell-200 hover:ring-2 focus:outline-none appearance-none"
 	>
-		{#each currencies as currency}
+		{#each availableFiatCurrencies as currency}
 			<option value={currency}>
 				{getCurrencyString(currency)}
 			</option>
