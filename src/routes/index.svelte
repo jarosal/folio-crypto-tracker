@@ -8,6 +8,7 @@
 	import type { GlobalData } from '$lib/third-party/coingecko/types/GlobalData';
 	import fetchGlobalData from '$lib/third-party/coingecko/methods/fetchGlobalData';
 	import MarketSummary from '$lib/components/content/coins-table/MarketSummary.svelte';
+	import Loading from '$lib/components/common/Loading.svelte';
 
 	let coins: Coins = null;
 	let globalData: GlobalData = null;
@@ -48,6 +49,8 @@
 			<MarketSummary {globalData} {btcPrice} />
 		</CoinsTable>
 	{:else}
-		loading
+		<div class="h-96 grid place-items-center">
+			<Loading />
+		</div>
 	{/if}
 </section>
