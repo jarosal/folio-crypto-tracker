@@ -17,10 +17,8 @@
 			value = (marketCap / 1000000000000).toFixed(1) + ' Trillion';
 		}
 
-		return `${$fiatCurrencyStore.selectedCurrency.sign}${value}`;
+		return value;
 	}
-
-	let displayValue = formatMarketCap(marketCap);
 </script>
 
-<span> {displayValue} </span>
+<span> {$fiatCurrencyStore.selectedCurrency.sign}{formatMarketCap(marketCap)} </span>

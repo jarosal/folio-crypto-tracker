@@ -2,17 +2,12 @@
 	import type { Coins } from '$lib/third-party/coingecko/types/Coins';
 	import { fiatCurrencyStore } from '$lib/stores/FiatCurrencyStore';
 	import { formatMarketCap, roundNumber } from '$lib/third-party/coingecko/utils/formatting/numbers';
-	import MarketSummary from './coins-table/MarketSummary.svelte';
 	import PriceChange from './coins-table/PriceChange.svelte';
-	import type { GlobalData } from '$lib/third-party/coingecko/types/GlobalData';
 
 	export let coins: Coins;
-	export let globalData: GlobalData;
-
-	const btcPrice = coins[0].current_price;
 </script>
 
-<MarketSummary {globalData} {btcPrice} />
+<slot />
 
 <table style="width:100vh" class="m-5 mx-auto text-eggshell-50 font-lato">
 	<tr class="border-b border-t border-eggshell-50 text-[14px]">

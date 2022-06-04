@@ -18,6 +18,7 @@
 	import type { Coins } from '$lib/third-party/coingecko/types/Coins';
 	import type { GlobalData } from '$lib/third-party/coingecko/types/GlobalData';
 	import fetchGlobalData from '$lib/third-party/coingecko/methods/fetchGlobalData';
+	import MarketSummary from '$lib/components/content/coins-table/MarketSummary.svelte';
 
 	export let coins: Coins;
 	export let globalData: GlobalData;
@@ -25,6 +26,8 @@
 	async function fetchCoins() {
 		coins = await getTopCoins($fiatCurrencyStore.selectedCurrency, 10);
 	}
+
+	let btcPrice = coins[0].current_price;
 
 	$: $fiatCurrencyStore.selectedCurrency, fetchCoins();
 </script>
@@ -34,5 +37,7 @@
 </section>
 
 <section>
-	<CoinsTable {coins} {globalData} />
+	<CoinsTable {coins}>
+		<MarketSummary {globalData} {btcPrice} />
+	</CoinsTable>
 </section>
