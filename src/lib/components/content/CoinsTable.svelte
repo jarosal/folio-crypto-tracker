@@ -21,7 +21,7 @@
 		<th class="px-4 py-3 text-right">Market cap</th>
 	</tr>
 	{#each coins as coin, index}
-		<tr class="border-b border-eggshell-50 font-normal text-[13px]">
+		<tr class="border-b border-eggshell-50 font-normal text-[13px] hover:bg-lavender-600 dark:hover:bg-raisin-700">
 			<td class="px-4 py-3 text-center">{index + 1}</td>
 			<td class="px-4 py-3 flex items-center "><img class="w-4 h-4 mr-2" src={coin.image} alt="coin icon" />{coin.name}</td>
 			<td class="px-4 py-3 text-right">{$fiatCurrencyStore.selectedCurrency.sign}{roundNumber(coin.current_price)}</td>
