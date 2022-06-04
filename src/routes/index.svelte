@@ -1,18 +1,7 @@
-<script lang="ts" context="module">
-	import getTopCoins from '$lib/third-party/coingecko/methods/fetchTopCoins';
-	import { fiatCurrencyStore } from '$lib/stores/FiatCurrencyStore';
-	import { get } from 'svelte/store';
-
-	var currency = get(fiatCurrencyStore).selectedCurrency;
-
-	export async function load() {
-		const coinsData = await getTopCoins(currency, 10);
-		const globalData = await fetchGlobalData();
-		return { props: { coins: coinsData, globalData: globalData } };
-	}
-</script>
-
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { fiatCurrencyStore } from '$lib/stores/FiatCurrencyStore';
+	import fetchTopCoins from '$lib/third-party/coingecko/methods/fetchTopCoins';
 	import FrontPageLogo from '$lib/components/logos/FrontPageLogo.svelte';
 	import CoinsTable from '$lib/components/content/CoinsTable.svelte';
 	import type { Coins } from '$lib/third-party/coingecko/types/Coins';
@@ -20,24 +9,45 @@
 	import fetchGlobalData from '$lib/third-party/coingecko/methods/fetchGlobalData';
 	import MarketSummary from '$lib/components/content/coins-table/MarketSummary.svelte';
 
-	export let coins: Coins;
-	export let globalData: GlobalData;
+	let coins: Coins = null;
+	let globalData: GlobalData = null;
+	let btcPrice: number = 15;
 
-	async function fetchCoins() {
-		coins = await getTopCoins($fiatCurrencyStore.selectedCurrency, 10);
+	onMount(async () => {
+		await setCoins().then(() => {
+			setBtcPrice();
+		});
+		await setGlobalData();
+	});
+
+	async function setCoins() {
+		coins = await fetchTopCoins($fiatCurrencyStore.selectedCurrency, 10);
 	}
 
-	let btcPrice = coins[0].current_price;
+	async function setGlobalData() {
+		globalData = await fetchGlobalData();
+	}
 
-	$: $fiatCurrencyStore.selectedCurrency, fetchCoins();
+	function setBtcPrice() {
+		btcPrice = coins.find((x) => x.symbol == 'btc').current_price;
+	}
+
+	$: $fiatCurrencyStore.selectedCurrency,
+		setCoins().then(() => {
+			setBtcPrice();
+		});
 </script>
 
-<section class="block m-auto ">
+<section class="block m-auto">
 	<FrontPageLogo />
 </section>
 
 <section>
-	<CoinsTable {coins}>
-		<MarketSummary {globalData} {btcPrice} />
-	</CoinsTable>
+	{#if coins && globalData}
+		<CoinsTable {coins}>
+			<MarketSummary {globalData} {btcPrice} />
+		</CoinsTable>
+	{:else}
+		loading
+	{/if}
 </section>
