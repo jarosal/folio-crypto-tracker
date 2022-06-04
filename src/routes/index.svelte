@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { fiatCurrencyStore } from '$lib/stores/FiatCurrencyStore';
 	import fetchTopCoins from '$lib/third-party/coingecko/methods/fetchTopCoins';
-	import FrontPageLogo from '$lib/components/logos/FrontPageLogo.svelte';
+	import FrontPageLogo from '$lib/components/common/FrontPageLogo.svelte';
 	import CoinsTable from '$lib/components/content/CoinsTable.svelte';
 	import type { Coins } from '$lib/third-party/coingecko/types/Coins';
 	import type { GlobalData } from '$lib/third-party/coingecko/types/GlobalData';
