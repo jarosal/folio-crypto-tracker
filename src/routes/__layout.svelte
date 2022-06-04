@@ -3,6 +3,7 @@
 	import '../app.css';
 	import Nav from '$lib/components/layout/Nav.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
+	import { fade } from 'svelte/transition';
 </script>
 
 <SvelteTheme attribute="class" />
@@ -10,7 +11,7 @@
 <Nav />
 
 <main class="min-h-screen mt-[120px] xl:min-h-layout">
-	<div class="container mx-auto grid justify-center">
+	<div class="container mx-auto grid justify-center" transition:fade={{ duration: 150 }}>
 		<slot />
 	</div>
 </main>
