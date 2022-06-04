@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import { currencies } from '$lib/utility/currency/availableFiatCurrencies';
+import { currencies } from '$lib/data/availableFiatCurrencies';
 
 export type FiatCurrency = {
     sign: string;
