@@ -1,4 +1,4 @@
-import { request } from "$lib/third-party/utility/request";
+import { request } from "src/third-party/utility/request";
 import type { GlobalData } from "../types/GlobalData";
 import { URL } from "../utils/constants";
 

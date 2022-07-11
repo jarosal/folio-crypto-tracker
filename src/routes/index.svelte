@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { fiatCurrencyStore } from '$lib/stores/FiatCurrencyStore';
-	import fetchTopCoins from '$lib/third-party/coingecko/methods/fetchTopCoins';
-	import FrontPageLogo from '$lib/components/common/FrontPageLogo.svelte';
-	import CoinsTable from '$lib/components/content/CoinsTable.svelte';
-	import type { Coins } from '$lib/third-party/coingecko/types/Coins';
-	import type { GlobalData } from '$lib/third-party/coingecko/types/GlobalData';
-	import fetchGlobalData from '$lib/third-party/coingecko/methods/fetchGlobalData';
-	import MarketSummary from '$lib/components/content/coins-table/MarketSummary.svelte';
-	import Loading from '$lib/components/common/Loading.svelte';
+	import { fiatCurrencyStore } from 'src/stores/FiatCurrencyStore';
+	import fetchTopCoins from 'src/third-party/coingecko/methods/fetchTopCoins';
+	import FrontPageLogo from 'src/components/common/FrontPageLogo.svelte';
+	import CoinsTable from 'src/components/content/CoinsTable.svelte';
+	import type { Coins } from 'src//third-party/coingecko/types/Coins';
+	import type { GlobalData } from 'src/third-party/coingecko/types/GlobalData';
+	import fetchGlobalData from 'src/third-party/coingecko/methods/fetchGlobalData';
+	import MarketSummary from 'src/components/content/coins-table/MarketSummary.svelte';
+	import Loading from 'src/components/common/Loading.svelte';
 
 	let coins: Coins = null;
 	let globalData: GlobalData = null;

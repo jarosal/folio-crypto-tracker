@@ -1,7 +1,7 @@
 <script lang="ts">
-	import UserPanel from '$lib/components/layout/nav/UserPanel.svelte';
-	import ThemeSwitch from '$lib/components/layout/nav/ThemeSwitch.svelte';
-	import CurrencySwitch from '$lib/components/layout/nav/CurrencySwitch.svelte';
+	import UserPanel from 'src/components/layout/nav/UserPanel.svelte';
+	import ThemeSwitch from 'src/components/layout/nav/ThemeSwitch.svelte';
+	import CurrencySwitch from 'src/components/layout/nav/CurrencySwitch.svelte';
 </script>
 
 <nav class="w-full absolute inset-x-0 top-0 p-10">

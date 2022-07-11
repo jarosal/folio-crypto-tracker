@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Coins } from '$lib/third-party/coingecko/types/Coins';
-	import { fiatCurrencyStore } from '$lib/stores/FiatCurrencyStore';
-	import { formatMarketCap, roundNumber } from '$lib/third-party/coingecko/utils/formatting/numbers';
+	import type { Coins } from 'src/third-party/coingecko/types/Coins';
+	import { fiatCurrencyStore } from 'src/stores/FiatCurrencyStore';
+	import { formatMarketCap, roundNumber } from 'src/third-party/coingecko/utils/formatting/numbers';
 	import PriceChange from './coins-table/PriceChange.svelte';
 	import { goto } from '$app/navigation';
 
