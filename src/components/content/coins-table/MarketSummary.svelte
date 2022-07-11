@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { GlobalData } from 'src/third-party/coingecko/types/GlobalData';
+	import type { GlobalData } from '$logic/third-party/coingecko/types/GlobalData';
 	import PriceChange from './PriceChange.svelte';
-	import { roundNumber } from 'src/third-party/coingecko/utils/formatting/numbers';
+	import { roundNumber } from '$logic/third-party/coingecko/utils/formatting/numbers';
 	import MarketCap from './market-summary/MarketCap.svelte';
 
 	export let globalData: GlobalData;

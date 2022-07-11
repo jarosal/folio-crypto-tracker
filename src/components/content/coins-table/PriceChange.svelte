@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { roundNumber } from 'src/third-party/coingecko/utils/formatting/numbers';
+	import { roundNumber } from '$logic/third-party/coingecko/utils/formatting/numbers';
 	import GreenPriceChange from './price-change/GreenPriceChange.svelte';
 	import RedPriceChange from './price-change/RedPriceChange.svelte';
 

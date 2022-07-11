@@ -1,4 +1,4 @@
-import { request } from "src/third-party/utility/request";
+import { request } from "$logic/third-party/utility/request";
 import type { CoinData } from "../types/CoinData";
 import { URL } from "../utils/constants";
 

@@ -1,5 +1,5 @@
-import type { FiatCurrency } from "src/stores/FiatCurrencyStore";
-import { request } from "src/third-party/utility/request";
+import type { FiatCurrency } from "$stores/FiatCurrencyStore";
+import { request } from "$logic/third-party/utility/request";
 import type { Coins } from "../types/Coins";
 import { URL } from "../utils/constants";
 

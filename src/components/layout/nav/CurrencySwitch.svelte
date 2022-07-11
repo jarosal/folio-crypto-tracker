@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fiatCurrencyStore, availableFiatCurrencies, getCurrencyString } from 'src/stores/FiatCurrencyStore';
+	import { fiatCurrencyStore, availableFiatCurrencies, getCurrencyString } from '$stores/FiatCurrencyStore';
 </script>
 
 <div class="relative inline-flex">

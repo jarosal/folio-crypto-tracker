@@ -1,4 +1,4 @@
-import type { FiatCurrency } from "src/stores/FiatCurrencyStore";
+import type { FiatCurrency } from "$stores/FiatCurrencyStore";
 
 const usd: FiatCurrency = {
     sign: '$',

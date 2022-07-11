@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fiatCurrencyStore } from 'src/stores/FiatCurrencyStore';
+	import { fiatCurrencyStore } from '$stores/FiatCurrencyStore';
 
 	export let btcMarketCap: number;
 	export let btcPrice: number;
