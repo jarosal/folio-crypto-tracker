@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { roundNumber } from '$logic/third-party/coingecko/utils/formatting/numbers';
-	import GreenPriceChange from './price-change/GreenPriceChange.svelte';
-	import RedPriceChange from './price-change/RedPriceChange.svelte';
+	import { roundNumber } from '$logic/utils/formatting';
+	import GreenPriceChange from '$components/common/price-change/GreenPriceChange.svelte';
+	import RedPriceChange from '$components/common/price-change/RedPriceChange.svelte';
 
 	export let priceChange: number;
 

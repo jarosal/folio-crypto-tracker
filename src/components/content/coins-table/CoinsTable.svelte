@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Coins } from '$logic/third-party/coingecko/types/Coins';
-	import { fiatCurrencyStore } from '$stores/FiatCurrencyStore';
-	import { formatMarketCap, roundNumber } from '$logic/third-party/coingecko/utils/formatting/numbers';
-	import PriceChange from './coins-table/PriceChange.svelte';
+	import { fiatCurrencyStore } from '$stores';
+	import { formatMarketCap, roundNumber } from '$logic/utils/formatting';
+	import { PriceChange } from '$components/common';
 	import { goto } from '$app/navigation';
 
 	export let coins: Coins;

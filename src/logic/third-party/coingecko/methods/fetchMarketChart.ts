@@ -1,4 +1,4 @@
-import { request } from "$logic/third-party/utility/request";
+import { request } from "$logic/utils/request";
 import type { FiatCurrency } from "$stores/FiatCurrencyStore";
 import type { MarketChart } from "../types/MarketChart";
 import { URL } from "../utils/constants";

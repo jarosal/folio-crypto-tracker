@@ -1,8 +1,7 @@
 <script lang="ts">
 	import type { GlobalData } from '$logic/third-party/coingecko/types/GlobalData';
-	import PriceChange from './PriceChange.svelte';
-	import { roundNumber } from '$logic/third-party/coingecko/utils/formatting/numbers';
-	import MarketCap from './market-summary/MarketCap.svelte';
+	import { roundNumber } from '$logic/utils/formatting';
+	import { MarketCap, PriceChange } from '$components/common';
 
 	export let globalData: GlobalData;
 	export let btcPrice: number;
