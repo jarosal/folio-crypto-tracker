@@ -1,8 +1,7 @@
 <script lang="ts">
 	import SvelteTheme from 'svelte-themes/SvelteTheme.svelte';
 	import '../app.css';
-	import Nav from '$lib/components/layout/Nav.svelte';
-	import Footer from '$lib/components/layout/Footer.svelte';
+	import { Nav, Footer } from '$components/layout';
 	import { fade } from 'svelte/transition';
 </script>
 

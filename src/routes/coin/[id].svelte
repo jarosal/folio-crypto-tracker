@@ -1,9 +1,9 @@
 <script context="module" lang="ts">
-	import { fiatCurrencyStore } from '$lib/stores/FiatCurrencyStore';
-	import fetchCoinData from '$lib/third-party/coingecko/methods/fetchCoinData';
-	import fetchMarketChart from '$lib/third-party/coingecko/methods/fetchMarketChart';
-	import type { CoinData } from '$lib/third-party/coingecko/types/CoinData';
-	import type { MarketChart } from '$lib/third-party/coingecko/types/MarketChart';
+	import { fiatCurrencyStore } from '$stores/FiatCurrencyStore';
+	import fetchCoinData from '$logic/third-party/coingecko/methods/fetchCoinData';
+	import fetchMarketChart from '$logic/third-party/coingecko/methods/fetchMarketChart';
+	import type { CoinData } from '$logic/third-party/coingecko/types/CoinData';
+	import type { MarketChart } from '$logic/third-party/coingecko/types/MarketChart';
 	import { get } from 'svelte/store';
 
 	const selectedFiatCurrency = get(fiatCurrencyStore).selectedCurrency;
